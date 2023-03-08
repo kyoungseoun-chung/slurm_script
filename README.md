@@ -2,9 +2,11 @@
 
 This package is designed to generate slurm script to submit `mpi` jobs to a cluster.
 
+
 ## Usage
 
 ```bash
+$ sjob --h
 slurm_script version: 0.1.2
 usage: slurm_script [-h] [-n NPROC] [-j JOB_NAME] [-t TIME] [-m MEM_PER_CPU]
                     [-c COMMAND [COMMAND ...]]
@@ -22,6 +24,15 @@ options:
                         Memory per core [MB].
   -c COMMAND [COMMAND ...], --command COMMAND [COMMAND ...]
                         Program command.
+```
+
+## Note
+
+It seems like due to a security reason, it is not possible to use `sjob` command directly from the cluster.
+Therefore, you can use the following command instead
+
+```bash
+python -m slurm_script --h
 ```
 
 ## Example
