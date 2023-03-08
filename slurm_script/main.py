@@ -26,7 +26,7 @@ SLURM_ARGS.add_argument("-c", "--command", help="Program command.", nargs="+", t
 args_to_slurm_flag = {
     "nproc": " -n ",
     "job_name": " --job-name=",
-    "time": "--time=",
+    "time": " --time=",
     "mem_per_cpu": " --mem-per-cpu=",
     "output": " --output=",
     "command": " ",
