@@ -2,6 +2,13 @@
 
 This package is designed to generate slurm script to submit `mpi` jobs to a cluster.
 
+## Installation
+
+You can install the package using `pip`.
+
+```bash
+python -m pip install slurm_script
+```
 
 ## Usage
 
