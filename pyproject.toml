@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "slurm-script"
-version = "0.1.4"
+version = "0.1.5"
 description = "Python Slurm script interface"
 authors = ["Kyoungseoun Chung <kyoungseoun.chung@gmail.com>"]
 readme = "README.md"

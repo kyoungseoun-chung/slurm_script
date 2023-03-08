@@ -48,9 +48,8 @@ def main() -> None:
             template += prefix + args_to_slurm_flag[ar] + str(val) + "\n"
 
     if argv.command is not None:
-        keyword = ""
-        n_val = [keyword + v for v in argv.command]
-        template += "\nmpirun" + args_to_slurm_flag["command"] + str(n_val[0])
+        run_command = " ".join(argv.command)
+        template += "\nmpirun" + args_to_slurm_flag["command"] + run_command
     else:
         raise ValueError("No command provided.")
 
@@ -68,4 +67,4 @@ def main() -> None:
             temp_file.flush()
             subprocess.run(["sbatch", temp_file.name])
     else:
-        print("Finished without running script.")
+        print("Finished without running the script.")
