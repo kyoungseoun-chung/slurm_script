@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "slurm_script" }]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"

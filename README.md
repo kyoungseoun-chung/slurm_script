@@ -23,3 +23,28 @@ options:
   -c COMMAND [COMMAND ...], --command COMMAND [COMMAND ...]
                         Program command.
 ```
+
+## Example
+
+```bash
+$ sjob -n 10 -j test_run -t 10:00:00 -m 1024 -mail BEGIN,END,FAIL -nt 1 -cnt 10 -a module add python -c python test.py
+slurm_script version: 0.1.6
+
+Preview of the generated script:
+--------------------------------
+#!/bin/bash
+
+#SBATCH -n 10
+#SBATCH --job-name=test_run
+#SBATCH --time=10:00:00
+#SBATCH --mem-per-cpu=1024
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=10
+
+module add python
+
+mpirun python test.py
+--------------------------------
+Do you want to run the script? [y/n] 
+```
