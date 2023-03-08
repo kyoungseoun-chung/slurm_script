@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "slurm-script"
-version = "0.1.7"
+version = "0.1.8"
 description = "Python Slurm script interface"
 authors = ["Kyoungseoun Chung <kyoungseoun.chung@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "slurm_script" }]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
