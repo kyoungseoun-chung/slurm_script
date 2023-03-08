@@ -45,12 +45,12 @@ def main() -> None:
     for ar in vars(argv):
         val = getattr(argv, ar)
         if val is not None and ar != "command":
-            template += prefix + args_to_slurm_flag[ar] + val + "\n"
+            template += prefix + args_to_slurm_flag[ar] + str(val) + "\n"
 
     if argv.command is not None:
         keyword = ""
         n_val = [keyword + v for v in argv.command]
-        template += "\nmpirun" + args_to_slurm_flag["command"] + n_val[0]
+        template += "\nmpirun" + args_to_slurm_flag["command"] + str(n_val[0])
     else:
         raise ValueError("No command provided.")
 
